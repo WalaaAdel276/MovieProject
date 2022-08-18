@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="popper.min.js">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="loading" class=" justify-content-center align-items-center">
+        <div class="spinner ">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </section>
+    <section id="Box" >
+        <div class="innerBox ">
+            <div class="tab-options">
+                <ul class=" m-2">
+                    <li class="item1 "><a class="item" myKey="movie/now_playing">Now playing</a></li>
+                    <li class="item2 "><a class="item" myKey="movie/popular">Popular</a></li>
+                    <li class="item3 "><a class="item" myKey="movie/top_rated">Top Rated</a></li>
+                    <li class="item4 "><a class="item" myKey="trending/all/day">Trending</a></li>
+                    <li class="item4 "><a class="item" myKey="movie/upcoming">Upcoming</a></li>
+                    <li class="item6 "><a class="item" href="#Contact">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="social mx-4">
+                <a href=""><i class="fab fa-facebook-f p-2"></i></a>
+                <a href=""><i class="fab fa-twitter  p-2"></i></a>
+                <a href=""><i class="fas fa-globe  p-2"></i> </a>
+
+            </div>
+            <div class="text ">
+                <span>Copyright Â© 2019 All Rights<br> Reserved.</span>
+            </div>
+        </div>
+        <div class="outerBox ">
+            <div class="py-4"><img class="w-50" src="logo.png" alt=""></div>
+            <div class="settingIcon" id="toggleBtn"><i id="icon" class="fas fa-align-justify"></i></div>
+            <div class="globeIcon my-2">
+                <div class="py-2"><i class="fas fa-globe"></i></div>
+                <div class="py-2"><i class="fas fa-share-alt"></i></div>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="clear"></div>
+    <header class="w-100 mb-5">
+        <div class="container pt-5">
+            <div class="d-flex ">
+                <div class="col-md-6 bord  me-3"><input id="searchWord"
+                        class="w-100 text-center bg-transparent form-control text-white" type="text"
+                        placeholder="get movies by word..."></div>
+                <div class="col-md-6 bord  ms-3"><input id="searchMovies"
+                        class="w-100  text-center bg-transparent form-control text-white" type="text"
+                        placeholder="search"></div>
+            </div>
+        </div>
+    </header>
+    <section class="w-100">
+        <div class="container">
+            <div id="movies" class="d-flex row ">
+            </div>
+
+        </div>
+    </section>
+    <section id="Contact" >
+
+        <div class="container ">
+            <h2 class="text-light my-5">Contact Us...</h2>
+            <div class="d-flex row  justify-content-evenly align-content-between">
+                <div class="col-md-5 ">
+                    <div class=" bord mb-1">
+                        <input id="Name" class="   text-center bg-transparent form-control text-white" type="text"
+                            placeholder="Enter Your Name">
+                    </div>
+                    <div class="alert alert-danger" id="nameAlert" role="alert">
+                        Your Name is not valid
+                    </div>
+                </div>
+
+                <div class="col-md-5 ">
+                    <div class=" bord mb-1"><input id="Email"
+                            class="   text-center bg-transparent form-control text-white" type="text"
+                            placeholder="Enter Email"></div>
+                    <div class="alert alert-danger" id="emailAlert" role="alert">
+                        entre valid email
+                    </div>
+
+                </div>
+                <div class="col-md-5  ">
+                    <div class=" bord mb-1"><input id="Phone"
+                            class="  text-center bg-transparent form-control text-white" type="text"
+                            placeholder="Enter Phone"></div>
+                    <div class="alert alert-danger" id="phoneAlert" role="alert">
+                        entre valid phone
+                    </div>
+
+                </div>
+                <div class="col-md-5  ">
+                    <div class=" bord mb-1"><input id="Age" class="  text-center bg-transparent form-control text-white"
+                            type="text" placeholder="Enter Age"></div>
+                    <div class="alert alert-danger" id="ageAlert" role="alert">
+                        entre valid Age
+                    </div>
+                </div>
+                <div class="col-md-5 ">
+                    <div class=" bord mb-1"><input id=" Password"
+                            class="  text-center bg-transparent form-control text-white" type="password"
+                            placeholder="Enter Password"></div>
+                    <div class="alert alert-danger" id="passwordAlert" role="alert">
+                        entre valid password *Minimum eight characters, at least one letter and one number:*
+                    </div>
+                </div>
+                <div class="col-md-5  ">
+                    <div class=" bord mb-1"><input id="RePassword"
+                            class="  text-center bg-transparent form-control text-white" type="password"
+                            placeholder="Enter RePassword"></div>
+                    <div class="alert alert-danger" id="rePasswordAlert" role="alert">
+                        entre valid RePassword
+                    </div>
+                </div>
+            </div>
+            <div class=" d-flex row justify-content-center align-content-center text-center">
+                <div class="col-md-4 my-3">
+                    <button type="submit" disabled="" id="submitBtn"
+                        class="btn btn-outline-danger  mx-5 ms-5 ">Submit</button>
+                </div>
+                <div class="alert alert-light col-md-10" id="validation" role="alert">
+                    Registration Success.
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

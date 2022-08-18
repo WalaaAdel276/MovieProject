@@ -1,0 +1,217 @@
+ * {
+     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ /************************** spinner ****************************/
+
+ #loading {
+     position: fixed;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     background-color: #000000f2;
+     z-index: 999999999999999999999;
+     display: flex;
+ }
+
+ .spinner {
+     margin: 100px auto;
+     width: 50px;
+     height: 40px;
+     text-align: center;
+     font-size: 10px;
+ }
+
+ .spinner>div {
+     background-color: #fff;
+     height: 100%;
+     width: 6px;
+     display: inline-block;
+     -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+     animation: sk-stretchdelay 1.2s infinite ease-in-out;
+ }
+
+ .spinner .rect2 {
+     -webkit-animation-delay: -1.1s;
+     animation-delay: -1.1s;
+ }
+
+ .spinner .rect3 {
+     -webkit-animation-delay: -1.0s;
+     animation-delay: -1.0s;
+ }
+
+ .spinner .rect4 {
+     -webkit-animation-delay: -0.9s;
+     animation-delay: -0.9s;
+ }
+
+ .spinner .rect5 {
+     -webkit-animation-delay: -0.8s;
+     animation-delay: -0.8s;
+ }
+
+ @-webkit-keyframes sk-stretchdelay {
+     0%, 40%, 100% {
+         -webkit-transform: scaleY(0.4)
+     }
+     20% {
+         -webkit-transform: scaleY(1.0)
+     }
+ }
+
+ @keyframes sk-stretchdelay {
+     0%, 40%, 100% {
+         transform: scaleY(0.4);
+         -webkit-transform: scaleY(0.4);
+     }
+     20% {
+         transform: scaleY(1.0);
+         -webkit-transform: scaleY(1.0);
+     }
+ }
+
+ /*************************************************************/
+
+ body {
+     background-color: #000000f2;
+     font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+ 
+ }
+
+ .w-90 {
+     width: 90%;
+ }
+
+ input {
+     border: none !important;
+ }
+
+ .bord {
+     border-bottom: 1px solid rgba(255, 255, 255, .7);
+ }
+
+ .movie {
+     position: relative;
+     overflow:hidden;
+ }
+
+ .layer {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     height: 0;
+     background-color: rgba(255, 255, 255, .7);
+     text-align: center;
+     color: #000;
+     opacity: 0;
+     transition: all 0.5s ease;
+ }
+
+ .movie:hover .layer {
+     height: 100%;
+     opacity: 1;
+ }
+
+ #Box {
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 555555555555555555555;
+     height: 100vh;
+     width: 25%;
+ }
+
+ .outerBox {
+     width: 20%;
+     height: 100vh;
+     background-color: #f8f6f6;
+     text-align: center;
+     float: left;
+     position: relative;
+ }
+
+ .innerBox {
+     width: 80%;
+     height: 100vh;
+     background-color: #000000f2;
+     float: left;
+ }
+ .tab-options ul{
+    padding-left: 30px;
+     overflow: hidden;
+ }
+ .clear {
+     clear: both;
+ }
+
+ .settingIcon {
+     position: absolute;
+     top: 50%;
+     right: 40%;
+     font-size: 25px;
+ }
+
+ .globeIcon {
+     position: absolute;
+     bottom: 3%;
+     right: 40%;
+ }
+
+ #Box li {
+     list-style: none;
+     padding: 1rem;
+ }
+
+ #Box a {
+     text-decoration: none !important;
+     color: #f9f6f6;
+     font-weight: 500;
+     font-size: 16px;
+ }
+
+ .social {
+     position: absolute;
+     bottom: 17%;
+     left: 20px;
+ }
+
+ .text span {
+     color: #999;
+     position: absolute;
+     bottom: 7%;
+     left: 20px;
+ }
+
+ .innerBox .tab-options ul li a:hover {
+     color: #ff655c !important;
+ }
+
+ .social a i:hover {
+     color: #ff655c;
+ }
+
+ .tab-options .item1 , .tab-options .item2 , .tab-options .item3 , .tab-options .item4,
+  .tab-options .item5 , .tab-options .item6 {
+    padding-top: 500px;
+	opacity: 0;
+  }
+
+  .alert{
+      display: none;
+  }
+  @media (max-width:580px)
+{
+		#Box
+	{
+	width: 60%;
+
+	}
+    
+}
